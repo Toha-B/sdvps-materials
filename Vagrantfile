@@ -32,7 +32,7 @@ Vagrant.configure("2") do |config|
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
-  config.vm.network "private_network", ip: "192.168.56.10"
+  config.vm.network "private_network", ip: "192.168.0.114"
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
@@ -90,6 +90,6 @@ Vagrant.configure("2") do |config|
     tar -C /usr/local -xzf go1.17.5.linux-amd64.tar.gz
     echo 'export PATH=$PATH:/usr/local/go/bin' >> /etc/profile
     
-    echo -e "192.168.56.10\tubuntu-bionic\tubuntu-bionic" >> /etc/hosts
+    echo -e "192.168.0.114\tubuntu-bionic\tubuntu-bionic" >> /etc/hosts
   SHELL
 end
